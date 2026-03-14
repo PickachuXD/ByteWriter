@@ -65,7 +65,7 @@ class _8bit {
     }
 };
 ```
-There is a class called _byte8. Since it's a class, we can use as many bytes as we want.
+There is a class called _8bit. Since it's a class, we can use as many bytes as we want.
 ### Line 7: `int pins[8];`
 This class contains a list of type int that stores all eight pins so that the code knows which
 ones to use to write the number/data in binary via the digital pins.
