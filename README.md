@@ -8,7 +8,7 @@ As we can see in the code, there is a section that says `_8bit num;`. That secti
 _8bit. It contains all the pins to be used and the function for writing to them.
 
 ## Step 2: Declare the pins to be used.
-As we can see in the code, the mode for each pin is first declared, and then stored in the list named “num”
+As we can see in the code, the mode for each pin is first declared, and then stored in the list named “pins”
 (previously declared), which has 8 slots for storing the number of each pin. (I used these because they worked best 
 for me with my ESP8266.)
 ```
