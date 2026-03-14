@@ -16,7 +16,7 @@ _8bit num; // An object is created to store and execute functions for working wi
 
 struct {
   unsigned int n : 8; // A variable with a size of 8 bits (or one byte) that is declared.
-} bitnum;
+} byteNum;
 
 // Example This example shows how to generate a number by repeatedly adding 1 to it.-----
 
@@ -40,12 +40,12 @@ void setup() {
   num.pins[6] = 13;
   num.pins[7] = 15;
   // An initial value of 0 is set.
-  bitnum.n = 0;
+  byteNum.n = 0;
 }
 
 void loop() {
   bitnum.n++;
-  num.printBYTE(bitnum.n); // Function that writes the number in binary
+  num.printBYTE(byteNum.n); // Function that writes the number in binary
   delay(500);
   /*
     Note: You don't need to represent the number in binary; it works with any 
