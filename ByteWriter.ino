@@ -44,7 +44,7 @@ void setup() {
 }
 
 void loop() {
-  bitnum.n++;
+  bitNum.n++;
   num.printBYTE(byteNum.n); // Function that writes the number in binary
   delay(500);
   /*
