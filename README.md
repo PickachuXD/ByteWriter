@@ -11,7 +11,7 @@ _8bit. It contains all the pins to be used and the function for writing to them.
 As we can see in the code, the mode for each pin is first declared, and then stored in the list named “pins” in "num"
 (previously declared), which has 8 slots for storing the number of each pin. (I used these because they worked best 
 for me with my ESP8266.)
-```
+```c
 // The pins are declared as OUTPUT.
   pinMode(16, OUTPUT);
   pinMode(5, OUTPUT);
@@ -34,7 +34,7 @@ for me with my ESP8266.)
 
 ## Optional: Declare a variable.
 As we can see in this:
-```
+```c
 struct {
   unsigned int n : 8; // A variable with a size of 8 bits (or one byte) that is declared.
 } bitnum;
@@ -54,7 +54,7 @@ In my case, since I named my output byte ‘num’, I set it up as follows: `num
 
 ## How it works.
 If we look at the most important piece of code:
-```
+```c
 class _8bit {
   public:
     int pins[8]; // A list of size 8 is declared to store the pin numbers that will be used.
@@ -87,7 +87,7 @@ from a value entered directly.
 ### Line 17-19: Optional but important. (Trust me, read it just in case.)
 As we can see in lines 17 through 19,
 
-```
+```c
 struct {
   unsigned int n : 8; // A variable with a size of 8 bits (or one byte) that is declared.
 } byteNum;
@@ -95,7 +95,7 @@ struct {
 
 there is a variable named ‘n,’ which is simply the name of the declared variable. I declare it this way because it’s the best method I’ve found for declaring a variable that uses exactly 8 bits. This is necessary if we want to avoid potential future problems, since this works with exactly 8 bits—no more, no less. But if you’re not going to use variables, then you don’t need to include this.
 On line 19, the struct object named ‘byteNum’ is declared. You can name it whatever you like, since it's only used later to set `byteNum.n = 0;` and manipulate the variable. You can declare as many variables as you like, as shown in this example(But remember that 8 is the number of bits used for that variable, and I don't recommend changing it):
-```
+```c
 ...
 
 struct {
